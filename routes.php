@@ -4,7 +4,7 @@ require 'controllers/AuthController.php'; //inclui o controlador de autenticaç�
 require 'controllers/UserController.php'; //inclui o controlador de usuários
 require 'controllers/DashboardController.php'; //inclui o controlador de dashboard
 
-// Cria instâncias dos controladores para utilizar seus metodos
+// Cria instâncias dos controladores para utilizar seus métodos
 $authController = new AuthController(); // Instancia controlador de autenticação
 $userController = new UserController(); // Instancia controlador de usuário
 $dashboardController = new DashboardController(); // Instancia controlador de dashboard

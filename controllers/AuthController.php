@@ -3,6 +3,12 @@
 require_once 'models/user.php'
 class AuthController
 {
+// Função responsável processo de login
+public function login()
+{
+// Verifica se a requisição HTTP é do tipo post, ou seja, se o formulário foi enviado
+}
+
 
 }
 

@@ -1,15 +1,15 @@
 <?php
-//Requer o arquivo user que contém o model user com as funções de manipulação de dados de usuários
-require_once 'models/user.php'
-class AuthController
+//Requer o arquivo user que contem o model user com as funções de manupulação de dados de usuarios
+require_once 'models/user.php';
+ 
+class $AuthController
 {
-// Função responsável processo de login
-public function login()
-{
-// Verifica se a requisição HTTP é do tipo post, ou seja, se o formulário foi enviado
+   // Função responsavel para processo de login
+   public function login()
+   {
+      // Verifica se a requesição HHTTP é do tipo POST, ou seja, se o formulario foi enviado
+   }
 }
-
-
-}
-
+ 
 ?>
+ 

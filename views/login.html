@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    main {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #e75e8d; /* Cor personalizada #e75e8d */
+    }
+
+    button {
+        padding: 0.75rem;
+        background-color: #e75e8d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #d14a77;
+    }
+
+    a {
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+        color: #e75e8d;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <main>
+        <form action="">
+            <section>
+            <label for="email">Email</label>
+        <input type="email" name="email"placeholer="email" requerid>
+            </section>
+            <section>
+                <label for="">Senha</label>
+                <input type="password" name="senha"placeholer="Senha" required>
+            </section>
+            <button type="submit">Login</button>
+        </form>
+        <a href="">Cadastra-se</a>
+    </main>
+</body>
+</html>

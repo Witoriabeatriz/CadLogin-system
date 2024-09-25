@@ -19,11 +19,8 @@ class UserController{
         header('Location: index.php');
  
        }else{
-        include 'viwes/register .php';
+        include 'views/register.php';
        }
- 
- 
     }
 }
- 
 ?>

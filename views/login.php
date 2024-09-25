@@ -7,7 +7,7 @@
 </head>
 <body>
     <main>
-        <form action="">
+        <form action="index.php?action=login" method="post">
             <section>
             <label for="email"></label>
         <input type="email" name="email"placeholer="email" requerid>
@@ -18,7 +18,7 @@
             </section>
             <button type="submit">Login</button>
         </form>
-        <a href="">Cadastra-se</a>
+        <a href="index.php?action=register">Cadastra-se</a>
     </main>
 </body>
 </html>

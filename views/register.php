@@ -100,10 +100,10 @@ a:hover {
         <h2>Cadastro de usuario</h2>
         <form method="post" action="index.php?action=register">
             <label for="">Nome</label>
-            <input type="text" name id="nome" riquired>
+            <input type="text" name="nome" id="nome" riquired>
 
             <label for="">Email</label>
-            <input type="email" name id="email" riquired>
+            <input type="email" name="email" id="email" riquired>
  
             <label for="">Senha</label>
             <input type="password" name id="senha" riquired>

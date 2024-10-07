@@ -106,7 +106,7 @@ a:hover {
             </section>
             <section>
                 <label for="">Senha</label>
-                <input type="password" name="senha"placeholer="Senha" required>
+                <input type="password" name="senha" placeholer="Senha" required>
             </section>
             <button type="submit">Login</button>
         </form>

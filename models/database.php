@@ -7,7 +7,7 @@ class Database{
         if(!self::$instance){
             //configuração de conexão com BD
             $host        = 'localhost';
-            $db         = 'sistema_usuarios';
+            $db          = 'sistema_usuarios';
             $user        = 'root';
             $password    = '';
 

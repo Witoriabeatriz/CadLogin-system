@@ -19,6 +19,8 @@ switch($action){
      case 'register':
         $userController->register();
         break;
+        case 'dashboard':
+            $dashboardController->index();
         case 'logout': 
             $authController->lougout();
     default:

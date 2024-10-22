@@ -34,7 +34,7 @@ class AuthController
       }
    }
    // Função responsável por fazer o lougout (encerrar a sessão do usuário)
-   public function lougout (){
+   public function logout() {
       // Iniciar a sessão para destruí-la
       session_start();
       // Destroi todas as informações da sessão

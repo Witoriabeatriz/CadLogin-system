@@ -33,6 +33,15 @@ class AuthController
          include 'views/login.php';
       }
    }
+   // Função responsável por fazer o lougout (encerrar a sessão do usuário)
+   public function lougout (){
+      // Iniciar a sessão para destruí-la
+      session_start();
+      // Destroi todas as informações da sessão
+      session_destroy();
+      // redireciona o usuário para a página inicial
+      header('Location: index.php');
+   }
 
 
 }

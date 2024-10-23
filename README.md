@@ -69,8 +69,10 @@ Os perfis disponíveis são:
 
 - **Gestor**: Gerencia usuários e suas informações.   
  <img src="img/gestor.png" align="center" />
+
 - **Colaborador**: Acesso limitado às suas informações pessoais.  
-    <img src="img/colaborador.png" align="center" />  
+    <img src="img/colaborador.png" align="center" />
+    
 - **Lista de usuários**: Fornece informações dos usuários atráves de uma tabela
   <img src="img/lista.png" align="center" />   
 

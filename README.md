@@ -66,17 +66,17 @@ A página de login (`views/login.php`) permite que usuários já cadastrados ace
 Os perfis disponíveis são:
 - **Admin**: Tem acesso a todas as funcionalidades do sistema.
  
- <img src="img/admin.png" align="center" />  
+  <img src="img/admin.png" align="center" />  
 
 
 - **Gestor**: Gerencia usuários e suas informações.
    
- <img src="img/gestor.png" align="center" />
+  <img src="img/gestor.png" align="center" />
 
 
 - **Colaborador**: Acesso limitado às suas informações pessoais.
   
-    <img src="img/colaborador.png" align="center" />
+  <img src="img/colaborador.png" align="center" />
 
     
 - **Lista de usuários**: Fornece informações dos usuários atráves de uma tabela.

@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #e0f7fa;
             margin: 0;
             padding: 0;
             color: #333;
@@ -64,11 +64,11 @@
         }
 
         .gestor {
-            background-color: #e8f5e9;
+            background-color: #e0f7fa;
         }
 
         .colaborador {
-            background-color: #f9fbe7;
+            background-color: #e0f7fa;
         }
 
         /* Responsivo */
@@ -95,6 +95,7 @@
 
 <body class="<?= $_SESSION['perfil'] ?>">
     <!-- Define a classe com base no perfil -->
+    <br><br> <br><br> <br><br>
     <div class="container">
         <h1>Bem-vindo,
             <?= $_SESSION['perfil'] ?>

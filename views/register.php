@@ -106,7 +106,7 @@ a:hover {
             <input type="email" name="email" id="email" riquired>
  
             <label for="">Senha</label>
-            <input type="password" name id="senha" riquired>
+            <input type="password" name="senha" id="senha" riquired>
  
             <label for="">Perfil</label>
             <select name="perfil" id="perfil">

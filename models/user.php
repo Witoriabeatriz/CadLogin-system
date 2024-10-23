@@ -34,7 +34,6 @@ class User
         $stmt = $conn->prepare("INSERT INTO usuarios(nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
         $stmt->execute($data);
     }
-
     // Função para listar todas as informações dos usuários no BD
     public static function all() {
         $conn = Database::getConnection();

@@ -51,20 +51,30 @@ O projeto segue a arquitetura **MVC** para separar a lógica de negócio, a inte
 
 ## Funcionalidades
 
-### Cadastro de Usuário
+### Cadastro de Usuário  
+<img src="img/cadastro.png" align="center" /> 
 
 Na página de cadastro (`views/register.php`), o usuário pode preencher um formulário com nome, e-mail, senha e perfil. O controlador `UserController.php` lida com a criação do novo usuário no banco de dados, utilizando o método `register`.
 
 ### Login
+<img src="img/login.png" align="center" /> 
 
 A página de login (`views/login.php`) permite que usuários já cadastrados acessem suas contas. A autenticação é feita pelo controlador `AuthController.php`, utilizando o método `login`.
 
 ### Perfis de Usuário
 
 Os perfis disponíveis são:
-- **Admin**: Tem acesso a todas as funcionalidades do sistema.
-- **Gestor**: Gerencia usuários e suas informações.
-- **Colaborador**: Acesso limitado às suas informações pessoais.
+- **Admin**: Tem acesso a todas as funcionalidades do sistema.  
+ <img src="img/admin.png" align="center" />  
+
+- **Gestor**: Gerencia usuários e suas informações.   
+ <img src="img/gestor.png" align="center" />
+- **Colaborador**: Acesso limitado às suas informações pessoais.  
+    <img src="img/colaborador.png" align="center" />  
+- **Lista de usuários**: Fornece informações dos usuários atráves de uma tabela
+  <img src="img/lista.png" align="center" />   
+
+
 
 ## Padrão de Projeto
 

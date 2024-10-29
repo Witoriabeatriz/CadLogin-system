@@ -140,15 +140,17 @@ session_start();
                     <td><?= $user["email"] ?></td>
                     <td><?= $user["perfil"] ?></td>
                     <td>
-                        <?php if (isset($_SESSION["perfil"]) && ($_SESSION["perfil"] == "admin" || $_SESSION["perfil"] == "gestor")): ?>
-                            <a href="editar.php?id=<?= $user['ID']; ?>">Editar</a>
-                        <?php endif; ?>
-                        <?php if (isset($_SESSION["perfil"]) && $_SESSION["perfil"] == "admin"): ?>
-                            <a href="excluir.php?id=<?= $user['ID']; ?>">Excluir</a>
-                        <?php endif; ?>
-                    </td>
+
+                   <?php if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'): ?>
+                   <a href="index.php?action=edit?id=<?= $user['id']?>" class="btn">Editar</a>
+                   <?php endif; ?>
+
+                   <?php if($_SESSION['perfil'] == 'admin'):?>
+                    <a href="" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                    <?php endif;?>
+                 </td>
                 </tr>
-                <?php endforeach; ?>
+                <?php endforeach;?>
             </tbody>
         </table>
         <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>

@@ -27,11 +27,11 @@ class UserController
         $users = User::all();
         include "views/list_users.php";
     }
-    public function edit($id){
+    public function edit($ID){
         session_start();
         if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
 
-            $user = User::find($id);
+            $user = User::find($ID);
 
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $data = [
@@ -39,7 +39,7 @@ class UserController
                     "email"  => $_POST["email"],
                     "perfil" => $_POST["perfil"]
                 ];
-                User::update($id, $data);
+                User::update($ID, $data);
                 header('Location: index.php? action=list');
             } else{
                 include 'views/edit_user.php';
@@ -47,8 +47,10 @@ class UserController
         }else{
             echo 'Você não tem permissão para editar usuários';
         }
-    
-
+            }
+            public function delete($ID){
+                User::delete($ID);
+                header('Location: index.php?action=list');
             }
         }
 ?>

@@ -142,7 +142,7 @@ session_start();
                     <td>
 
                    <?php if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'): ?>
-                   <a href="index.php?action=edit?id=<?= $user['id']?>" class="btn">Editar</a>
+                   <a href="index.php?action=edit?id=<?= $user['ID']?>" class="btn">Editar</a>
                    <?php endif; ?>
 
                    <?php if($_SESSION['perfil'] == 'admin'):?>

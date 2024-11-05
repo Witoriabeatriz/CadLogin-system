@@ -18,12 +18,12 @@ class User
     }
 
     // Cria função que localiza usuário pelo ID
-    public static function find($id) {
+    public static function find($ID) {
         // Obtém a conexão com o banco de dados
         $conn = Database::getConnection();
 
-        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE id = :id");
-        $stmt->execute(["id" => $id]);
+        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE ID = :ID");
+        $stmt->execute(["ID" => $ID]);
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -42,16 +42,21 @@ class User
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function update($id, $data){
+    public static function update($ID, $data){
         $conn = Database::getConnection();
         // Prepara a consulta sql para autorizaçâo do dados do usuário
-        $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil WHERE id = :id");
-        $data['id'] = $id;
+        $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil WHERE ID = :ID");
+        $data['ID'] = $ID;
         $stmt->execute($data);
     }
+
+    //FUNÇÃO PARA EXCLUSÃO DE UM USUÁRIO PELO ID
+    public static function delete($ID)
+    {
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare('DELETE FROM usuarios WHERE ID= :ID');
+        $stmt->execute(['ID' => $ID]);
+    }
 }
-
-
-
 
 ?>

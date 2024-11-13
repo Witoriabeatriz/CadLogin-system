@@ -4,98 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        main {
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilização do formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        /* Estilização do botão de envio */
+        button#submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #e75e8d;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button#submit:hover {
+            background-color: #d65078;
+        }
+
+        /* Estilização do link de login */
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #337ab7;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        a:hover {
+            color: #286090;
+        }
+    </style>
 </head>
-<style>
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-div {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    border: 1px solid #dcdfe3;
-}
-
-h2 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-label {
-    font-weight: 500;
-    display: block;
-    color: #34495e;
-    font-size: 14px;
-    margin-top: 15px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select {
-    width: calc(100% - 20px); /* Ajusta para o tamanho total */
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccd1d9;
-    border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
-    font-size: 14px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-select:focus {
-    border-color: #2980b9;
-    outline: none;
-}
-
-button {
-    background-color: #2980b9;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 15px;
-}
-
-button:hover {
-    background-color: #1e5f8a;
-}
-
-a {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #2980b9;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-</style>
-<<body>
+<body>
     <main>
         <h2>Cadastro de Usuário</h2>
         <form action="index.php?action=register" method="post">

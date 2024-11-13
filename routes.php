@@ -27,13 +27,16 @@ switch($action)
     case "logout":
         $authController->logout();
         break;
-    case "list":
+        case "list":
         $userController->list();
         break;
     case "edit":
-        $id = $_GET['ID'];
-        $userController->edit($ID);
+        $id = $_GET["id"];
+        $userController->edit($id);
         break;
+    case "delete":
+        $id = $_GET["id"];
+        $userController->delete($id);
     default:
         $authController->login();
         break;

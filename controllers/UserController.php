@@ -27,30 +27,35 @@ class UserController
         $users = User::all();
         include "views/list_users.php";
     }
-    public function edit($ID){
+
+    public function edit($id) {
         session_start();
-        if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
 
-            $user = User::find($ID);
+        if ($_SESSION["perfil"] == "admin" || $_SESSION["perfil"] == "gestor") {
+            $user = User::find($id);
 
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $data = [
                     "nome"   => $_POST["nome"],
                     "email"  => $_POST["email"],
                     "perfil" => $_POST["perfil"]
                 ];
-                User::update($ID, $data);
-                header('Location: index.php? action=list');
-            } else{
-                include 'views/edit_user.php';
+
+                User::update($id, $data);
+
+                header("Location: index.php?action=list");
+            } else {
+                include "views/edit_user.php";
             }
-        }else{
-            echo 'Você não tem permissão para editar usuários';
+        } else {
+            echo "Você não tem permissão para editar usuários";
         }
-            }
-            public function delete($ID){
-                User::delete($ID);
-                header('Location: index.php?action=list');
-            }
-        }
+    }
+
+    public function delete($id) {
+        User::delete($id);
+        header("Location: index.php?action=list");
+    }
+}
+
 ?>

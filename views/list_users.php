@@ -1,8 +1,6 @@
 <?php
-
 session_start();
-if (isset($_SESSION["perfil"])):
-
+if (isset($_SESSION["perfil"])): 
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +9,7 @@ if (isset($_SESSION["perfil"])):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
     <style>
-    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -139,8 +132,11 @@ if (isset($_SESSION["perfil"])):
                         <?php if ($_SESSION["perfil"] == "admin" || $_SESSION["perfil"] == "gestor"): ?>
                             <a href="index.php?action=edit&id=<?= $user["id"] ?>" class="edit">Editar</a>
                         <?php endif; ?>
+
                         <?php if ($_SESSION["perfil"] == "admin"): ?>
-                            <a href="index.php?action=delete&id=<?= $user["id"] ?>" class="delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                            <form method="post" action="index.php?action=delete&id=<?= $user["id"] ?>" style="display:inline;">
+                                <button style="border: none" type="submit" class="delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
+                            </form>
                         <?php endif; ?>
                     </td>
                 </tr>

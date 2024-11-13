@@ -27,7 +27,7 @@ switch($action)
     case "logout":
         $authController->logout();
         break;
-        case "list":
+    case "list":
         $userController->list();
         break;
     case "edit":
